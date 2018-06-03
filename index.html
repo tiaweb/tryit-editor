@@ -1,0 +1,113 @@
+<html>
+
+<head>
+    <title>Simple Split Panels - jquery-resizable</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style/bootstrap.min.css">
+    <link rel="stylesheet" href="style/style.css">
+</head>
+
+<body style="">
+    <div class="page-container">
+
+        <h1>
+            jquery-resizable - A simple tryit editor
+        </h1>
+        <div class="panel-container">
+            <div class="panel-left">
+                <pre id="editor"></pre>
+            </div>
+
+            <div class="splitter">
+            </div>
+
+            <div class="panel-right">
+                <div class="upload-file">
+                    <input type="file" name="file" id="file" onchange="changeValue(event)">
+                    <img src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDI5NC4xNTYgMjk0LjE1NiIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMjk0LjE1NiAyOTQuMTU2OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgd2lkdGg9IjY0cHgiIGhlaWdodD0iNjRweCI+CjxnPgoJPHBhdGggZD0iTTIyNy4wMDIsMTA4LjI1NmMtMi43NTUtNDEuNzUxLTM3LjYtNzQuODc4LTgwLjAzNi03NC44NzhjLTQyLjQ0NywwLTc3LjI5OCwzMy4xNDEtODAuMDM4LDc0LjkwNyAgIEMyOC45NzgsMTEzLjA1OSwwLDE0NS4zOSwwLDE4NC4xODRjMCw0Mi4yMzQsMzQuMzYsNzYuNTk1LDc2LjU5NSw3Ni41OTVoMTE2LjQ4M2MzLjMxMywwLDYtMi42ODcsNi02cy0yLjY4Ny02LTYtNkg3Ni41OTUgICBDNDAuOTc3LDI0OC43NzgsMTIsMjE5LjgwMSwxMiwxODQuMTg0YzAtMzQuMjc1LDI2LjgzMy02Mi41NjgsNjEuMDg3LTY0LjQxMWMzLjE4NC0wLjE3MSw1LjY3OC0yLjgwMyw1LjY3OC01Ljk5MSAgIGMwLTAuMTE5LTAuMDAzLTAuMjM2LTAuMDEtMC4zNTVjMC4wOS0zNy41MzYsMzAuNjU0LTY4LjA0OSw2OC4yMTEtNjguMDQ5YzM3LjU2MywwLDY4LjEzMiwzMC41MTgsNjguMjExLDY4LjA2MyAgIGMtMC4wMDUsMC4xMTYtMC4wMDksMC4yMzgtMC4wMDksMC4zMjljMCwzLjE5NiwyLjUwNSw1LjgzMSw1LjY5Niw1Ljk5MmMzNC4zNywxLjc0MSw2MS4yOTIsMzAuMDM4LDYxLjI5Miw2NC40MjEgICBjMCwxOS41MjYtOC42OTgsMzcuODAxLTIzLjg2NCw1MC4xMzhjLTIuNTcxLDIuMDkxLTIuOTU5LDUuODctMC44NjgsOC40NGMyLjA5MSwyLjU3MSw1Ljg3LDIuOTU5LDguNDQsMC44NjggICBjMTcuOTgtMTQuNjI2LDI4LjI5Mi0zNi4yOTMsMjguMjkyLTU5LjQ0N0MyOTQuMTU2LDE0NS4yNjksMjY1LjA4LDExMi45MjYsMjI3LjAwMiwxMDguMjU2eiIgZmlsbD0iIzQxNTE2YiIvPgoJPHBhdGggZD0iTTE0MC45NjYsMTQxLjA3OHY3Ni41MTFjMCwzLjMxMywyLjY4Nyw2LDYsNnM2LTIuNjg3LDYtNnYtNzYuNTExYzAtMy4zMTMtMi42ODctNi02LTZTMTQwLjk2NiwxMzcuNzY1LDE0MC45NjYsMTQxLjA3OHoiIGZpbGw9IiM0MTUxNmIiLz4KCTxwYXRoIGQ9Ik0xODEuMjgzLDE1Mi4yMDRjMS41MzYsMCwzLjA3MS0wLjU4Niw0LjI0My0xLjc1N2MyLjM0My0yLjM0MywyLjM0My02LjE0MiwwLTguNDg1bC0zNC4zMTctMzQuMzE3ICAgYy0yLjM0My0yLjM0My02LjE0My0yLjM0My04LjQ4NSwwbC0zNC4zMTcsMzQuMzE3Yy0yLjM0MywyLjM0My0yLjM0Myw2LjE0MiwwLDguNDg1YzIuMzQzLDIuMzQzLDYuMTQzLDIuMzQzLDguNDg1LDAgICBsMzAuMDc0LTMwLjA3NGwzMC4wNzQsMzAuMDc0QzE3OC4yMTIsMTUxLjYxOCwxNzkuNzQ4LDE1Mi4yMDQsMTgxLjI4MywxNTIuMjA0eiIgZmlsbD0iIzQxNTE2YiIvPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+Cjwvc3ZnPgo=">
+                    <h6>Upload BIOS</h6>
+                </div>
+                <div class="upload-text">
+                    <input type="text" name="path-file" class="path-file" required="true" placeholder="Please ... here!">
+                </div>
+                <div class="button-start">
+                    <button class="blue" data-direction="left" data-toggle="modal" data-target="#MBModal">View MB</button>
+                    <button class="blue" data-direction="left" data-toggle="modal" data-target="#PCModal">View PC</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="MBModal" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title text-center">PREVIEW ON MOBILE</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div id="iphone5_emulator">
+                            <div id="iframe_iphone5_emulator">
+                                <iframe id="iframe" src="http://static-org.hadarone.com/demo/in-picture/in-picture.html" frameborder="0" style="background-color: #fff;">
+                                </iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="modal fade" id="PCModal" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title text-center">PREVIEW ON DESKTOP</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div id="desktop_emulator">
+                            <div id="iframe_desktop_emulator">
+                                <iframe id="iframe" src="test.html" frameborder="0" style="background-color: #fff;">
+                                </iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <script src="script/jquery.min.js"></script>
+        <script src="script/bootstrap.min.js"></script>
+        <script src="script/jquery-resizable.js"></script>
+        <script src="script/require.js"></script>
+        <script src="script/show_own_source.js"></script>
+        <script>
+            $(".panel-left").resizable({
+                handleSelector: ".splitter",
+                resizeHeight: false
+            });
+
+            require.config({ paths: { "ace": "lib/ace" } });
+            require(["ace/ace"], function (ace) {
+                var editor = ace.edit("editor", {
+                    theme: "ace/theme/dreamweaver",
+                    mode: "ace/mode/html",
+                    maxLines: 25,
+                    minLines: 20,
+                    wrap: true,
+                    fontSize: 15,
+                    autoScrollEditorIntoView: true
+                });
+                // console.log(123, editor.getSession().getValue());
+            });
+
+            function changeValue(event) {
+                var tmppath = URL.createObjectURL(event.target.files[0]);
+                $('.path-file').val(tmppath);
+            }
+
+        </script>
+    </div>
+</body>
+
+</html>

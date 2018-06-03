@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="">
+    <title> In-Picture Creative | HadarOne Ad Platform</title>
+
+    <link rel="stylesheet" href="https://static-org.hadarone.com/demo/in-picture/example.css">
+
+    <style>
+        img {
+            width: 100%;
+            max-width: 480px;
+            height: auto;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div style="width: 100%; margin: 0 auto;">
+        <h1>DEMO In-Picture Creative</h1>
+
+        <script type="text/javascript">
+            var placementId = 1000;
+            (function (w, d, o, u, g) {
+                w['adbro'] = {
+                    publisher: g,
+                    config: null
+                };
+                a = d.createElement(o),
+                    m = d.getElementsByTagName(o)[0];
+                a.async = 1;
+                a.src = u;
+                m.parentNode.insertBefore(a, m);
+            })
+                (window, document, 'script', '//static-org.hadarone.com/demo/in-picture/in-picture-format.js',
+                placementId);
+            window.adbro.config = {
+                //debug: true,
+                functions: {
+                    onPlaceholderSized: function (div, img) {
+                        div.style.top = '-' + (img.offsetHeight + 5) + 'px';
+                        div.style.marginBottom = '-' + (img.offsetHeight + 5) + 'px';
+                        div.style.display = 'block';
+                    },
+                    getSatellitePlaceholder: function (div) {
+                        var block = div.parentNode.parentNode,
+                            satellite = document.createElement('div');
+                        block.appendChild(satellite);
+                        return satellite;
+                    },
+                    getImages: function () {
+                        var img = document.querySelector('#articleContent img');
+                        if (img) {
+                            return [img];
+                        } else {
+                            return [];
+                        }
+                    },
+
+                }
+            };
+        </script>
+
+        <!-- Main -->
+        <section>
+            <div id="" class="main_content" style="width: 100%;">
+                <div class="thin_box" style="width: 100%; height: 24px; margin-bottom: 12px;"></div>
+                <div class="thin_box" style="width: 100%; height: 24px; margin-bottom: 12px;"></div>
+                <div class="thin_box" style="width: 40%; height: 24px; margin-bottom: 24px;"></div>
+                <div class="thin_box" style="width: 100%; height: 14px; margin-bottom: 8px;"></div>
+                <div class="thin_box" style="width: 100%; height: 14px; margin-bottom: 8px;"></div>
+                <div class="thin_box" style="width: 100%; height: 14px; margin-bottom: 8px;"></div>
+                <div class="thin_box" style="width: 100%; height: 14px; margin-bottom: 8px;"></div>
+                <div class="thin_box" style="width: 20%; height: 14px; margin-bottom: 24px;"></div>
+
+
+                <!-- DEMO placement -->
+                <!-- This image will be used for in-image ads -->
+                <img src="http://img.f51.bdpcdn.net/Assets/Media/2018/05/16/42/neuer1.jpg" data-adbro="true" />
+
+                <div class="thin_box" style="width: 20%; height: 14px; margin-bottom: 24px;"></div>
+                <div class="thin_box" style="width: 100%; height: 14px; margin-bottom: 8px;"></div>
+                <div class="thin_box" style="width: 20%; height: 14px; margin-bottom: 24px;"></div>
+
+                <!-- This image will be skipped -->
+                <img src="https://i-kinhdoanh.vnecdn.net/2018/05/30/123-JPG-3275-1527666412.jpg" />
+
+                <div class="thin_box" style="width: 100%; height: 14px; margin: 24px 0 8px;"></div>
+                <div class="thin_box" style="width: 100%; height: 14px; margin-bottom: 8px;"></div>
+                <div class="thin_box" style="width: 100%; height: 14px; margin-bottom: 8px;"></div>
+
+                <img src="http://img.f8.bdpcdn.net/Assets/Media/2018/05/30/26/duc1.jpg" />
+
+                <div class="thin_box" style="width: 100%; height: 14px; margin: 24px 0 8px;"></div>
+                <div class="thin_box" style="width: 100%; height: 14px; margin-bottom: 8px;"></div>
+                <div class="thin_box" style="width: 100%; height: 14px; margin-bottom: 8px;"></div>
+
+                <img src="https://i-dulich.vnecdn.net/2018/05/29/1-6256-1527556452.jpg" />
+
+
+
+
+                <div class="thin_box" style="width: 100%; height: 14px; margin: 24px 0 8px;"></div>
+                <div class="thin_box" style="width: 100%; height: 14px; margin-bottom: 8px;"></div>
+                <div class="thin_box" style="width: 100%; height: 14px; margin-bottom: 8px;"></div>
+                <div class="thin_box" style="width: 100%; height: 14px; margin-bottom: 8px;"></div>
+                <div class="thin_box" style="width: 100%; height: 14px; margin-bottom: 8px;"></div>
+                <div class="thin_box" style="width: 100%; height: 14px; margin-bottom: 8px;"></div>
+                <div class="thin_box" style="width: 100%; height: 14px; margin-bottom: 8px;"></div>
+                <div class="thin_box" style="width: 100%; height: 14px; margin-bottom: 8px;"></div>
+                <div class="thin_box" style="width: 100%; height: 14px; margin-bottom: 8px;"></div>
+                <div class="thin_box" style="width: 100%; height: 14px; margin-bottom: 8px;"></div>
+                <div class="thin_box" style="width: 100%; height: 14px; margin-bottom: 8px;"></div>
+                <div class="thin_box" style="width: 100%; height: 14px; margin-bottom: 24px;"></div>
+                <div class="deep_box" style="width: 100%; height: 240px; margin-bottom: 24px;"></div>
+                <div class="thin_box" style="width: 40%; height: 24px; margin-bottom: 8px;"></div>
+                <div class="thin_box" style="width: 100%; height: 14px; margin-bottom: 8px;"></div>
+                <div class="thin_box" style="width: 100%; height: 14px; margin-bottom: 8px;"></div>
+                <div class="thin_box" style="width: 100%; height: 14px; margin-bottom: 8px;"></div>
+                <div class="thin_box" style="width: 100%; height: 14px; margin-bottom: 8px;"></div>
+                <div class="thin_box" style="width: 100%; height: 14px; margin-bottom: 8px;"></div>
+                <div class="thin_box" style="width: 70%; height: 14px; margin-bottom: 8px;"></div>
+            </div>
+
+        </section>
+
+    </div>
+
+
+</body>
+
+</html>
